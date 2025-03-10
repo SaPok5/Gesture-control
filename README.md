@@ -10,7 +10,7 @@ This repository contains a complete pipeline for collecting hand gesture data, t
 - [Code Structure](#code-structure)
 - [Customization](#customization)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
