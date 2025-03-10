@@ -40,51 +40,58 @@ pip install opencv-python mediapipe tensorflow numpy matplotlib scikit-learn pya
 pip install msvc-runtime
 ```
 ## Usage
-Data Collection:
+# Data Collection:
 
-Run the data collection cells in the notebook.
-For each gesture, the webcam will display the feed.
-Press s to start capturing data and q to quit.
-100 samples per gesture are automatically captured and stored.
-Model Training:
+-Run the data collection cells in the notebook.
+-For each gesture, the webcam will display the feed.
+-Press s to start capturing data and q to quit.
+-100 samples per gesture are automatically captured and stored.
 
-After collecting data, the notebook loads and preprocesses the data.
-The MLP model is built and trained using the collected gesture data.
-Training and validation accuracy are plotted for quick feedback.
-The trained model is saved as gesture_model.keras.
-Real-Time Gesture Recognition & Desktop Control:
+# Model Training:
 
-The notebook loads the trained model and uses it to predict gestures in real time.
-Depending on the detected gesture, corresponding desktop actions (mouse movement, clicking, volume control, etc.) are performed.
-Evaluation:
+-After collecting data, the notebook loads and preprocesses the data.
+-The MLP model is built and trained using the collected gesture data.
+-Training and validation accuracy are plotted for quick feedback.
+-The trained model is saved as gesture_model.keras.
 
-The notebook includes a section that evaluates the model on a test set and prints the test accuracy.
-It also measures and displays the processing latency for a single frame.
-Code Structure
-Data Collection:
+# Real-Time Gesture Recognition & Desktop Control:
+
+-The Code loads the trained model and uses it to predict gestures in real time.
+-Depending on the detected gesture, corresponding desktop actions (mouse movement, clicking, volume control, etc.) are performed.
+
+#Evaluation:
+
+-The notebook includes a section that evaluates the model on a test set and prints the test accuracy.
+-It also measures and displays the processing latency for a single frame.
+
+# Code Structure
+-Data Collection:
 Captures hand landmarks from the webcam and saves them for each gesture.
 
-Model Training:
+-Model Training:
 Loads and preprocesses data, splits it into training and test sets, builds the MLP, trains the model, and saves the trained model.
 
-Real-Time Gesture Recognition:
+-Real-Time Gesture Recognition:
 Uses MediaPipe and the trained model to recognize gestures from a live webcam feed and triggers desktop control actions accordingly.
 
-Evaluation:
+-Evaluation:
 Evaluates the trained model's performance and measures frame processing latency.
 
-Customization
+# Customization
 This project is designed for easy modification:
 
-Add New Gestures:
+->Add New Gestures:
 Update the gestures list and add corresponding actions in the real-time control loop.
-Model Architecture:
+
+->Model Architecture:
 Adjust the MLP layers, number of epochs, or batch size to experiment with model performance.
-Desktop Actions:
+
+->Desktop Actions:
 Customize or extend the desktop control actions (e.g., mouse movements, volume adjustments) as needed.
-Data Collection:
+
+->Data Collection:
 Change the number of samples or modify the user interface prompts for collecting gesture data.
 Feel free to fork the repository and adapt the code to suit your requirements.
 
-Contributing
+# Contributing
 Contributions are welcome! If you find bugs, have suggestions, or want to add new features, please open an issue or submit a pull request.
