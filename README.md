@@ -39,32 +39,32 @@ Before running the code, ensure you have Python 3.x installed. You can install t
 pip install opencv-python mediapipe tensorflow numpy matplotlib scikit-learn pyautogui pycaw comtypes
 pip install msvc-runtime
 ```
-## Usage
-# Data Collection:
+# Usage
+## Data Collection:
 
 -Run the data collection cells in the notebook.
 -For each gesture, the webcam will display the feed.
 -Press s to start capturing data and q to quit.
 -100 samples per gesture are automatically captured and stored.
 
-# Model Training:
+## Model Training:
 
 -After collecting data, the notebook loads and preprocesses the data.
 -The MLP model is built and trained using the collected gesture data.
 -Training and validation accuracy are plotted for quick feedback.
 -The trained model is saved as gesture_model.keras.
 
-# Real-Time Gesture Recognition & Desktop Control:
+## Real-Time Gesture Recognition & Desktop Control:
 
 -The Code loads the trained model and uses it to predict gestures in real time.
 -Depending on the detected gesture, corresponding desktop actions (mouse movement, clicking, volume control, etc.) are performed.
 
-#Evaluation:
+## Evaluation:
 
 -The notebook includes a section that evaluates the model on a test set and prints the test accuracy.
 -It also measures and displays the processing latency for a single frame.
 
-# Code Structure
+## Code Structure
 -Data Collection:
 Captures hand landmarks from the webcam and saves them for each gesture.
 
@@ -77,7 +77,7 @@ Uses MediaPipe and the trained model to recognize gestures from a live webcam fe
 -Evaluation:
 Evaluates the trained model's performance and measures frame processing latency.
 
-# Customization
+## Customization
 This project is designed for easy modification:
 
 ->Add New Gestures:
