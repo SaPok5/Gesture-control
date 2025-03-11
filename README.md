@@ -43,25 +43,33 @@ pip install msvc-runtime
 ## Data Collection:
 
 -Run the data collection cells in the notebook.
+
 -For each gesture, the webcam will display the feed.
+
 -Press s to start capturing data and q to quit.
+
 -100 samples per gesture are automatically captured and stored.
 
 ## Model Training:
 
 -After collecting data, the notebook loads and preprocesses the data.
+
 -The MLP model is built and trained using the collected gesture data.
+
 -Training and validation accuracy are plotted for quick feedback.
+
 -The trained model is saved as gesture_model.keras.
 
 ## Real-Time Gesture Recognition & Desktop Control:
 
 -The Code loads the trained model and uses it to predict gestures in real time.
+
 -Depending on the detected gesture, corresponding desktop actions (mouse movement, clicking, volume control, etc.) are performed.
 
 ## Evaluation:
 
 -The notebook includes a section that evaluates the model on a test set and prints the test accuracy.
+
 -It also measures and displays the processing latency for a single frame.
 
 ## Code Structure
